@@ -23,7 +23,7 @@ use \Blogwerk\Theme\Component\AbstractComponent;
  * @author Tom Forrer <tom.forrer@blogwerk.com
  * @copyright Copyright (c) 2014 Blogwerk AG (http://blogwerk.com)
  */
-class MenuComponent extends AbstractComponent
+class Menu extends AbstractComponent
 {
   const CACHE_KEY_MENUS = 'menus_cached';
 
