@@ -10,13 +10,13 @@
 
 require_once ABSPATH . '/vendor/autoload.php';
 
-use Blogwerk\Theme\SocialMediaKitWrapper;
+use Blogwerk\Theme\WordPressWrapper;
 use Blogwerk\Theme\Example;
 
 if (!is_child_theme()) {
-  $socialMediaKitWrapper = new SocialMediaKitWrapper();
+  $wordpressWrapper = new WordPressWrapper();
 
   // instantiate our theme
-  $exampleTheme = new Example($socialMediaKitWrapper);
+  $exampleTheme = new Example($wordpressWrapper);
   $exampleTheme->register();
 }
