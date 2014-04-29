@@ -1,4 +1,4 @@
-oop-theme
+oop-theme-example
 ========================
 
-A plugin / example theme bundle to create oop wordpress themes
+An exmaple theme based on the oop-theme-plugin
