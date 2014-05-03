@@ -28,8 +28,6 @@
   "require": {
     "composer/installers": "~1.0",
     "php": ">=5.4",
-    "johnpbloch/wordpress-core-installer": "~0.1",
-    "johnpbloch/wordpress": "~3.9",
     "blogwerk/oop-theme-plugin": "dev-master"
   },
 
