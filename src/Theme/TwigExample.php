@@ -11,31 +11,35 @@ namespace Blogwerk\Theme;
 use Blogwerk\Theme\AbstractTheme;
 
 /**
- * Class Example
+ * Class TwigExample
  *
  * @category Blogwerk
  * @package Blogwerk_Theme
  * @author Tom Forrer <tom.forrer@blogwerk.com
  * @copyright Copyright (c) 2014 Blogwerk AG (http://blogwerk.com)
  */
-class Example extends AbstractTheme
+class TwigExample extends AbstractTwigTheme
 {
   const SLUG_SIDEBAR = 'sidebar';
   const SLUG_MENU = 'menu';
 
   public function setup()
   {
+    // specifiy the twig views folder in the current theme
+    $this->services['view_path'] = function($c){
+      return $c['map_folder']('views/twig');
+    };
     $this->registerViews(array(
 
       // main entry points
-      'index' => 'views/php/main.php',
-      'home' => 'views/php/main.php',
-      'frontpage' => 'views/php/main.php',
+      'index' => 'main.html.twig',
+      'home' => 'main.html.twig',
+      'frontpage' => 'main.html.twig',
 
       // layout
-      'header' => 'views/php/layout/header.php',
-      'footer' => 'views/php/layout/footer.php',
-      'sidebar' => 'views/php/layout/sidebar.php',
+      'header' => 'layout/header.html.twig',
+      'footer' => 'layout/footer.html.twig',
+      'sidebar' => 'layout/sidebar.html.twig',
     ));
 
     // register sidebar
