@@ -10,13 +10,18 @@
 
 require_once ABSPATH . '/vendor/autoload.php';
 
-use Blogwerk\Theme\WordPressWrapper;
+use Blogwerk\Theme\ServiceContainer;
+use Blogwerk\Theme\TwigExample;
 use Blogwerk\Theme\Example;
 
 if (!is_child_theme()) {
-  $wordpressWrapper = new WordPressWrapper();
+  $serviceContainer = new ServiceContainer();
 
-  // instantiate our theme
-  $exampleTheme = new Example($wordpressWrapper);
+  // instantiate our twig theme
+  $exampleTheme = new TwigExample($serviceContainer);
+
+  // normal php view files
+  //$exampleTheme = new Example($serviceContainer);
+
   $exampleTheme->register();
 }

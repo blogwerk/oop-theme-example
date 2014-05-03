@@ -1,0 +1,14 @@
+<h1>{{ fn.bloginfo('name') }} </h1>
+
+<h2>{{ fn. bloginfo('description') }}></h2>
+
+<nav role="navigation" class="main-menu">
+    <ul class="clearfix">
+        {{ component.Menu.getCachedMenu({
+            'theme_location': 'menu',
+            'container': false,
+            'items_wrap': '%3$s',
+            'depth': 1
+        }) | raw }}
+    </ul>
+</nav>
