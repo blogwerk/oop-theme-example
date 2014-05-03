@@ -1,5 +1,5 @@
 {
-  "name": "tmf/oop-theme",
+  "name": "blogwerk/oop-theme-example",
 
   "type": "wordpress-theme",
 
@@ -21,7 +21,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "http://github.com/tmf/oop-theme-plugin"
+      "url": "http://github.com/blogwerk/oop-theme-plugin"
     }
   ],
 
